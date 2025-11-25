@@ -1,0 +1,108 @@
+# 公共配置文件
+spring:
+  application:
+    name: OJ-backend
+  # 默认 dev 环境
+  profiles:
+    active: dev
+  # 支持 swagger3
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  # session 配置
+  session:
+    store-type: redis
+    timeout: 2592000
+  # 数据库配�?  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.60.131:3306/OJ?useUnicode=true&characterEncoding=utf-8&allowPublicKeyRetrieval=true&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: kdkt1412@
+  # Redis 配置
+  redis:
+    database: 15
+    host: 192.168.60.131
+    port: 6379
+    timeout: 5000
+  # Elasticsearch 配置
+  # todo 需替换配置，然后取消注�?#  elasticsearch:
+#    uris: http://localhost:9200
+#    username: root
+#    password: 123456
+  # 文件上传
+  servlet:
+    multipart:
+      # 大小限制
+      max-file-size: 10MB
+server:
+  address: 0.0.0.0
+  port: 8101
+  servlet:
+    context-path: /api
+    # cookie 30 天过�?    session:
+      cookie:
+        max-age: 2592000
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: false
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      logic-delete-field: isDelete # 全局逻辑删除的实体字段名
+      logic-delete-value: 1 # 逻辑已删除值（默认�?1�?      logic-not-delete-value: 0 # 逻辑未删除值（默认�?0�?# 微信相关
+wx:
+  # 微信公众平台
+  # todo 需替换配置
+  mp:
+    token: xxx
+    aesKey: xxx
+    appId: xxx
+    secret: xxx
+    config-storage:
+      http-client-type: HttpClient
+      key-prefix: wx
+      redis:
+        host: 127.0.0.1
+        port: 6379
+      type: Memory
+  # 微信开放平�?  # todo 需替换配置
+  open:
+    appId: xxx
+    appSecret: xxx
+# 对象存储
+# todo 需替换配置
+cos:
+  client:
+    accessKey: xxx
+    secretKey: xxx
+    region: xxx
+    bucket: xxx
+# AI client config
+ai:
+  client:
+    base-url: https://api.deepseek.com/v1
+    api-key: ${AI_API_KEY:}
+    model: deepseek-chat
+    timeout-millis: 15000
+# Judge executor pool
+judge:
+  executor:
+    core-pool-size: 4
+    max-pool-size: 8
+    queue-capacity: 200
+    keep-alive-seconds: 60
+# 接口文档配置
+knife4j:
+  enable: true
+  openapi:
+    title: "接口文档"
+    version: 1.0
+    group:
+      default:
+        api-rule: package
+        api-rule-resources:
+          - com.axin.OJ.controller
+
+
+
+
