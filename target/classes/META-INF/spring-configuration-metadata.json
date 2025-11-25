@@ -1,0 +1,130 @@
+{
+  "groups": [
+    {
+      "name": "ai.client",
+      "type": "com.axin.OJ.ai.config.AiClientProperties",
+      "sourceType": "com.axin.OJ.ai.config.AiClientProperties"
+    },
+    {
+      "name": "cos.client",
+      "type": "com.axin.OJ.config.CosClientConfig",
+      "sourceType": "com.axin.OJ.config.CosClientConfig"
+    },
+    {
+      "name": "judge.executor",
+      "type": "com.axin.OJ.config.JudgeExecutorProperties",
+      "sourceType": "com.axin.OJ.config.JudgeExecutorProperties"
+    },
+    {
+      "name": "wx.open",
+      "type": "com.axin.OJ.config.WxOpenConfig",
+      "sourceType": "com.axin.OJ.config.WxOpenConfig"
+    }
+  ],
+  "properties": [
+    {
+      "name": "ai.client.api-key",
+      "type": "java.lang.String",
+      "description": "Api key for authorization.",
+      "sourceType": "com.axin.OJ.ai.config.AiClientProperties"
+    },
+    {
+      "name": "ai.client.base-url",
+      "type": "java.lang.String",
+      "description": "Base url of the LLM service, e.g. https:\/\/api.deepseek.com\/v1.",
+      "sourceType": "com.axin.OJ.ai.config.AiClientProperties"
+    },
+    {
+      "name": "ai.client.model",
+      "type": "java.lang.String",
+      "description": "Model name for chat\/completions.",
+      "sourceType": "com.axin.OJ.ai.config.AiClientProperties"
+    },
+    {
+      "name": "ai.client.timeout-millis",
+      "type": "java.lang.Integer",
+      "description": "Request timeout millis.",
+      "sourceType": "com.axin.OJ.ai.config.AiClientProperties"
+    },
+    {
+      "name": "cos.client.access-key",
+      "type": "java.lang.String",
+      "description": "accessKey",
+      "sourceType": "com.axin.OJ.config.CosClientConfig"
+    },
+    {
+      "name": "cos.client.accessKey",
+      "type": "java.lang.String",
+      "description": "Description for cos.client.accessKey."
+    },
+    {
+      "name": "cos.client.bucket",
+      "type": "java.lang.String",
+      "description": "Description for cos.client.bucket.",
+      "sourceType": "com.axin.OJ.config.CosClientConfig"
+    },
+    {
+      "name": "cos.client.region",
+      "type": "java.lang.String",
+      "description": "Description for cos.client.region.",
+      "sourceType": "com.axin.OJ.config.CosClientConfig"
+    },
+    {
+      "name": "cos.client.secret-key",
+      "type": "java.lang.String",
+      "description": "secretKey",
+      "sourceType": "com.axin.OJ.config.CosClientConfig"
+    },
+    {
+      "name": "cos.client.secretKey",
+      "type": "java.lang.String",
+      "description": "Description for cos.client.secretKey."
+    },
+    {
+      "name": "judge.executor.core-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.axin.OJ.config.JudgeExecutorProperties"
+    },
+    {
+      "name": "judge.executor.keep-alive-seconds",
+      "type": "java.lang.Integer",
+      "sourceType": "com.axin.OJ.config.JudgeExecutorProperties"
+    },
+    {
+      "name": "judge.executor.max-pool-size",
+      "type": "java.lang.Integer",
+      "sourceType": "com.axin.OJ.config.JudgeExecutorProperties"
+    },
+    {
+      "name": "judge.executor.queue-capacity",
+      "type": "java.lang.Integer",
+      "sourceType": "com.axin.OJ.config.JudgeExecutorProperties"
+    },
+    {
+      "name": "wx.open.app-id",
+      "type": "java.lang.String",
+      "sourceType": "com.axin.OJ.config.WxOpenConfig"
+    },
+    {
+      "name": "wx.open.app-secret",
+      "type": "java.lang.String",
+      "sourceType": "com.axin.OJ.config.WxOpenConfig"
+    },
+    {
+      "name": "wx.open.appId",
+      "type": "java.lang.String",
+      "description": "Description for wx.open.appId."
+    },
+    {
+      "name": "wx.open.appSecret",
+      "type": "java.lang.String",
+      "description": "Description for wx.open.appSecret."
+    },
+    {
+      "name": "wx.open.wx-mp-service",
+      "type": "me.chanjar.weixin.mp.api.WxMpService",
+      "sourceType": "com.axin.OJ.config.WxOpenConfig"
+    }
+  ],
+  "hints": []
+}
